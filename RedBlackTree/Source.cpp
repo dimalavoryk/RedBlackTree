@@ -1,8 +1,30 @@
 #include <iostream>
 #include "RedBlackTree.h"
 
+
+#define PRINT\
+	Tree.InOrderTraversal_Recursive();\
+	Tree.PreOrderTraversal_Recursive();\
+	Tree.PostOrderTraversal_Recursive();
+
+
 int main() noexcept
 {
+
+	RedBlackTree Tree;
+
+	Tree.Insert(30);
+	Tree.Insert(20);
+	Tree.Insert(40);
+	Tree.Insert(35);
+	Tree.Insert(50);
+
+	PRINT;
+
+	Tree.DeleteByValue(20);
+	PRINT;
+
+
 	std::cout << "Hello World!\n";
 }
 
